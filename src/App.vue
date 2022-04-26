@@ -25,6 +25,6 @@ export default {
 <style lang="scss">
 @import '@/style/general.scss';
 #app {
-  
+  width: 100%;
 }
 </style>
