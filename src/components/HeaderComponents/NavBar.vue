@@ -2,6 +2,7 @@
     <nav>
         <img src="@/assets/logo_seo_w_1x.png" alt="logo">
         <ul>
+            <!-- assegnazione color on over da implementare e possibile dropdown menu -->
             <li :key="index" v-for="(title,index) in navList" @mouseover="title.isOver = true">{{ title.title }}</li>
             <li><button>GET IN TOUCH NOW</button></li>
         </ul>
