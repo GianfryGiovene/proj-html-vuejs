@@ -9,6 +9,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faRoad } from '@fortawesome/free-solid-svg-icons';
 import { faVideo } from '@fortawesome/free-solid-svg-icons';
 import { faTint } from '@fortawesome/free-solid-svg-icons';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { faChartLine } from '@fortawesome/free-solid-svg-icons';
 
 /* imports font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -17,6 +20,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 library.add(faRoad);
 library.add(faVideo);
 library.add(faTint);
+library.add(faCog);
+library.add(faBuilding);
+library.add(faChartLine);
 
 /* adds font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon);

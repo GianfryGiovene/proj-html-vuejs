@@ -1,8 +1,9 @@
 <template>
     <div>
-        <font-awesome-icon  class="icon" :icon="['fa-solid', icon]" ></font-awesome-icon>
+        <font-awesome-icon  class="icon" :icon="icon" ></font-awesome-icon>
         <h4>{{ title }}</h4>
         <p>{{ text }}</p>
+        <a v-if="question" href="#">Read More ></a>
     </div>
 </template>
 
@@ -13,6 +14,7 @@ export default {
         title: String,
         icon: String,
         text: String,
+        question: Boolean,
     }
 }
 </script>
@@ -22,6 +24,7 @@ export default {
     div{
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 20px;
         text-align: center;
         padding: 40px;
@@ -36,6 +39,11 @@ export default {
         p{
             font-size: $p-small-size;
             line-height: 20px;
+            width: 75%;
+        }
+        a{
+            text-decoration: none;
+            color: $orange;
         }
 
 
