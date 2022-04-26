@@ -26,6 +26,5 @@ export default {
 @import '@/style/general.scss';
 #app {
   width: 100%;
-  background-color: $bg-general;
 }
 </style>

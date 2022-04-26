@@ -1,19 +1,21 @@
 <template>
     <section>
         <div>
-            <TitleAndInfo :title="sectionTitle" :info="sectionInfo"/>
-        </div>
-        <div>
-            <CardFirstType 
-                :key="index" 
-                v-for="(card,index) in cards" 
-                :icon="card.icon" 
-                :title="card.title" 
-                :text="card.text"
-            />
-        </div>
-        <div>
-
+            <div>
+                <TitleAndInfo :title="sectionTitle" :info="sectionInfo"/>
+            </div>
+            <div>
+                <CardFirstType 
+                    :key="index" 
+                    v-for="(card,index) in cards" 
+                    :icon="card.icon" 
+                    :title="card.title" 
+                    :text="card.text"
+                />
+            </div>
+            <div>
+                <img src="@/assets/agency-seo-desk-front-1200x570.jpg" alt="front-desk">
+            </div>
         </div>
     </section>
 </template>
@@ -58,19 +60,27 @@ export default {
 <style lang='scss' scoped>
 @import '@/style/variables';
     section{
+        background-color: $bg-general;
         padding: 80px;
-        max-width:$max-width;
-        margin: auto;
-        & > div:nth-child(2){
-            display: flex;
-            gap: 50px;
-            *{
-                width: calc(100% / 3);
+        & > div{
+            max-width:$max-width;
+            margin: auto;
+            & > div:first-child{
+                width: 35%;
+                margin: auto;
+            }
+            & > div:nth-child(2){
+                margin: 40px 0 ;
+                display: flex;
+                gap: 100px;
+                *{
+                    width: calc(100% / 3);
+                }
+            }
+            & > div:last-child{
+                width: 100%;
             }
         }
-        & > div:last-child{
-            background-image: url('@/assets/agency-seo-desk-front-1200x570.jpg');
-            height: 100px;
-        }
+        
     }
 </style>

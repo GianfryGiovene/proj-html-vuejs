@@ -19,8 +19,6 @@ export default {
 @import '@/style/variables';
 div{
     text-align: center;
-    width: 55%;
-    margin: auto;
     h3{
         font-size: $h3-size;
     }

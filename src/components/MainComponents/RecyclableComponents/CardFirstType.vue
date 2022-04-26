@@ -20,9 +20,24 @@ export default {
 <style lang='scss' scoped>
 @import '@/style/variables';
     div{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         text-align: center;
+        padding: 40px;
+        background-color: $white;
         .icon{
             color: $orange;
+            font-size: $icon-size;
         }
+        h4{
+            font-size: $h4-size;
+        }
+        p{
+            font-size: $p-small-size;
+            line-height: 20px;
+        }
+
+
     }
 </style>
