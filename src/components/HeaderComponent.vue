@@ -1,8 +1,8 @@
 <template>
-    <header>
-        <NavBar :navList="navBarList"/>
-        <section class="jumbo-tron">
-            <div>
+    <header class="container-fluid">
+        <NavBar  :navList="navBarList"/>
+        <section class="jumbo-tron container row">
+            <div class="col-6">
                 <h2>SEM Campaigns Made Simple With Avada</h2>
                 <p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare erat. Carabitur pulvinar elit.</p>
                 <button>BUY AVADA NOW</button>
@@ -56,20 +56,14 @@ export default {
 @import '@/style/variables';
     header{
         color:$white;
-        width: 100%;
-        border: 1px solid blue;
         background-image: url('@/assets/1-hero-image.png');
         background-size: cover;
         background-position: center;
         section{
             margin: auto;
-            max-width: $max-width;
-            border: 1px solid black;
             display: flex;
             padding: 180px 0;
             div{
-                width: 400px;
-                border: 1px solid red;
                 h2{
                     font-size: $h2-size;
                 }
@@ -79,9 +73,12 @@ export default {
                 button{
                     color: $white;
                     margin: 20px 10px 20px 0;
-                    padding: 10px 20px;
+                    padding: 8px 15px;
                     border: none;
-                    border-radius: 20px;
+                    border-radius: 30px;
+                    &:hover{
+                        filter: brightness(0.9)
+                    }
                 }
                 button:nth-child(3){
                     background-color: $bg-primary-button;

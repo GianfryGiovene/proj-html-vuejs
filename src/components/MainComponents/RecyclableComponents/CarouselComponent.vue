@@ -5,7 +5,7 @@
             <img :src="require(`@/assets/testimonials-${clientPointerSaved+1}.jpg`)" alt="">
             <p>{{ clients[clientPointerSaved].text }}</p>
             <div>
-                <h5>{{clients[clientPointerSaved].firstName +' ' + clients[clientPointerSaved].Surname }}</h5>
+                <h5>{{clients[clientPointerSaved].firstName +' '+ clients[clientPointerSaved].Surname }}</h5>
                 <span></span>
             </div>
         </div>

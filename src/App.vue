@@ -17,14 +17,11 @@ export default {
     HeaderComponent,
     MainComponent,
     FooterComponent
-
   }
 }
 </script>
 
 <style lang="scss">
 @import '@/style/general.scss';
-#app {
-  width: 100%;
-}
+
 </style>

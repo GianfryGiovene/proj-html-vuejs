@@ -6,7 +6,7 @@ import App from './App.vue'
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 /* imports specific icons */
-import { faRoad, faVideo, faTint, faCog, faBuilding, faChartLine} from '@fortawesome/free-solid-svg-icons';
+import { faRoad, faVideo, faTint, faCog, faBuilding, faChartLine, faBars} from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGoogle, faYoutube, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -16,6 +16,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 /* adds icons to the library */
 library.add(faRoad);
+library.add(faBars);
 library.add(faVideo);
 library.add(faTint);
 library.add(faCog);
