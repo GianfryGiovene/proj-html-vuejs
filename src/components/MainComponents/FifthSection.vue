@@ -5,6 +5,7 @@
                 <TitleAndInfo :title="sectionTitle" :info="sectionInfo"/>
             </div>
             <div>
+                <!-- da mettere immagine dentro!!! -->
                 <CardThirdType :key="index" v-for="(card,index) in cards" :news="card" />
             </div>
             <div>
@@ -70,6 +71,7 @@ section{
             gap: 40px;
             & > *{
                 width: calc(100% / 3 - 3rem);
+                background-color: $bg-general;
             }
         }
         & > div:last-child{

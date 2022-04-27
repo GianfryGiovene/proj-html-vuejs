@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!-- put image -->
         <img src="" alt="">
         <h4>{{ news.title }}</h4>
         <span>{{ news.data }}</span>
