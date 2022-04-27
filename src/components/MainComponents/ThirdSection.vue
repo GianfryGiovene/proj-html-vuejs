@@ -5,7 +5,7 @@
                 <TitleAndInfo :title="sectionTitle" :info="sectionInfo"/>
             </div>
             <div>
-                <img :key="index" v-for="(img,index) in analysisImgs" :src="img" :alt="['analysis-',index]">
+                <img :key="item" v-for="item in 6" :src="require(`@/assets/case-study-gallery-${item}-1-800x600.jpg`)" :alt="['analysis-'+item]">
             </div>
             <div>
                 <button>VIEW OUR WORK</button>
@@ -16,12 +16,6 @@
 
 <script>
 import TitleAndInfo from '@/components/MainComponents/RecyclableComponents/TitleAndInfo.vue';
-import caseStudy1 from '@/assets/case-study-gallery-1-1-800x600.jpg';
-import caseStudy2 from '@/assets/case-study-gallery-2-800x600.jpg';
-import caseStudy3 from '@/assets/case-study-gallery-3-1-800x600.jpg';
-import caseStudy4 from '@/assets/case-study-gallery-4-1-800x600.jpg';
-import caseStudy5 from '@/assets/case-study-gallery-5-1-800x600.jpg';
-import caseStudy6 from '@/assets/case-study-gallery-6-1-800x600.jpg';
 
 export default {
     name:'ThirdSection',
@@ -32,7 +26,6 @@ export default {
         return{
             sectionTitle:'Our Work',
             sectionInfo:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium adoloremque laudantium.',
-            analysisImgs:[caseStudy3,caseStudy2,caseStudy1,caseStudy4,caseStudy5,caseStudy6],
         }
     }
 }
