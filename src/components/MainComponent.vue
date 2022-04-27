@@ -7,7 +7,6 @@
         <FifthSection/>
         <SixthSection/>
         <SeventhSection/>
-        
     </main>
 </template>
 

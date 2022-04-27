@@ -34,7 +34,7 @@ export default {
             sectionInfo: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
             cards: [
                 {
-                    icon:'fas fa-cog',
+                    icon:'fab fa-google',
                     title:'Google SEO',
                     text:'Aliquam non elit lacus. Praesent aliquet, ipsum id scelerisque convallis, mi ligula euismod odio, vel dictum mi risus a mi.',
                     isThereALink: true,
