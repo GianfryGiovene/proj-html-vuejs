@@ -1,11 +1,12 @@
 <template>
     <section>
-        <div>
-            <div>
+        <div class="container">
+            <div class="row col-12 offset-0 col-md-6 offset-md-3 justify-content-center">
                 <TitleAndInfo :title="sectionTitle" :info="sectionInfo"/>
             </div>
-            <div>
+            <div class="row justify-content-center gap-5">
                 <CardFirstType 
+                    class="col-3"
                     :key="index" 
                     v-for="(card,index) in cards" 
                     :icon="card.icon" 
@@ -68,19 +69,7 @@ export default {
         background-color: $bg-general;
         padding-top: 80px;
         & > div{
-            max-width:$max-width;
-            margin: auto;
             & > div:first-child{
-                width: 35%;
-                margin: auto;
-            }
-            & > div:nth-child(2){
-                margin: 40px 0 ;
-                display: flex;
-                gap: 100px;
-                *{
-                    width: calc(100% / 3);
-                }
             }
             & > div:last-child{
                 width: 100%;
