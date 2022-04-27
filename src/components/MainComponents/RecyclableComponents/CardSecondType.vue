@@ -1,7 +1,14 @@
 <template>
-    <div>
+    <div class="card">
         <h4>{{ info.type }}</h4>
-        <span>{{info.price}}</span>
+        <div class="price">
+            <span class="currency">$</span>
+            <span class="integer-part">{{info.price}}</span>
+            <div>
+                <span class="decimal-part">99</span>
+                <span class="time">monthly</span>
+            </div>
+        </div>
         <span>{{info.projects}}</span>
         <span>{{info.storage}}</span>
         <span>{{info.subscription}}</span>
@@ -20,7 +27,7 @@ export default {
 
 <style lang='scss' scoped>
 @import '@/style/variables';
-    div{
+    .card{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -28,12 +35,30 @@ export default {
         text-align: center;
         padding: 30px;
         background-color: $white;
-        .icon{
-            color: $orange;
-            font-size: $icon-size;
-        }
         h4{
             font-size: $h4-size;
+        }
+        .price{
+            display: flex;
+            .currency{
+                align-self: start;
+            }
+            .integer-part{
+                align-self: center;
+                font-size: 2.5rem;
+                color: $scienceBlue;
+            }
+            & > div{
+                display: flex;
+                flex-direction: column;
+                .decimal-part{
+                    align-self: start;
+                    color: $scienceBlue;
+                }
+                .time{
+                    font-size: 0.6rem;
+                }
+            }
         }
         span{
             font-size: $p-small-size;

@@ -28,28 +28,28 @@ export default {
             cards:[
                 {
                     type: 'Standard',
-                    price: '19,99',
+                    price: '19',
                     projects: '5 Projects',
                     storage: '5 GB Storage',
                     subscription: 'Unlimited Users'
                 },
                 {
                     type: 'Premium',
-                    price: '29,99',
+                    price: '29',
                     projects: '10 Projects',
                     storage: '15 GB Storage',
                     subscription: 'Unlimited Users'
                 },
                 {
                     type: 'Professional',
-                    price: '39,99',
+                    price: '39',
                     projects: '15 Projects',
                     storage: '30 GB Storage',
                     subscription: 'Unlimited Users'
                 },
                 {
                     type: 'Extreme',
-                    price: '59,99',
+                    price: '59',
                     projects: 'Unlimited Projects',
                     storage: 'Unlimited Storage',
                     subscription: 'Unlimited Users'

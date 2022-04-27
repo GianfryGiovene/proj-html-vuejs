@@ -13,6 +13,7 @@ import { faCog } from '@fortawesome/free-solid-svg-icons';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { faChartLine } from '@fortawesome/free-solid-svg-icons';
 
+
 /* imports font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 

@@ -35,6 +35,7 @@ export default {
 @import '@/style/variables';
 section{
     padding: 80px 0;
+    background-color: $bg-general;
     & > div{
         max-width: $max-width;
         margin: auto;
