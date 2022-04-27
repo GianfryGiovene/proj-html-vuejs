@@ -4,9 +4,9 @@
             <div class="row col-12 offset-0 col-md-6 offset-md-3 justify-content-center">
                 <TitleAndInfo :title="sectionTitle" :info="sectionInfo"/>
             </div>
-            <div class="row justify-content-center gap-5">
+            <div class="row flex-column flex-md-row justify-content-between gap-5">
                 <CardFirstType 
-                    class="col-3"
+                    class="col-12 col-md-3"
                     :key="index" 
                     v-for="(card,index) in cards" 
                     :icon="card.icon" 
@@ -15,8 +15,8 @@
                     :question="card.isThereALink"
                 />
             </div>
-            <div>
-                <img src="@/assets/agency-seo-desk-front-1200x570.jpg" alt="front-desk">
+            <div class="col-12">
+                <img  class="w-100" src="@/assets/agency-seo-desk-front-1200x570.jpg" alt="front-desk">
             </div>
         </div>
     </section>
@@ -68,14 +68,5 @@ export default {
     section{
         background-color: $bg-general;
         padding-top: 80px;
-        & > div{
-            & > div:first-child{
-            }
-            & > div:last-child{
-                width: 100%;
-                padding-bottom: 0;
-            }
-        }
-        
     }
 </style>

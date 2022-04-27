@@ -1,5 +1,5 @@
 <template>
-    <header class="container-fluid">
+    <header class="container-fluid w-100">
         <NavBar  :navList="navBarList"/>
         <section class="jumbo-tron container row">
             <div class="col-6">

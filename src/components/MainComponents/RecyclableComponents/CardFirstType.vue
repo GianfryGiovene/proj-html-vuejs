@@ -1,5 +1,5 @@
 <template>
-    <div class="row flex-column align-items-center p-3">
+    <div class="row flex-column align-items-center justify-content-center p-3">
         <font-awesome-icon  class="icon" :icon="icon" ></font-awesome-icon>
         <h4 class="my-4">{{ title }}</h4>
         <p>{{ text }}</p>
