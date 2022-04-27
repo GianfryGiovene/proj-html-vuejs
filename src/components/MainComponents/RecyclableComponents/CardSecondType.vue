@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="ggf-card flex-column p-3">
         <h4>{{ info.type }}</h4>
         <div class="price">
             <span class="currency">$</span>
@@ -27,7 +27,7 @@ export default {
 
 <style lang='scss' scoped>
 @import '@/style/variables';
-    .card{
+    .ggf-card{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -57,17 +57,24 @@ export default {
                 }
                 .time{
                     font-size: 0.6rem;
+                    color: $dark-grey;
                 }
             }
         }
         span{
             font-size: $p-small-size;
             line-height: 20px;
+            color: $dark-grey;
         }
         button{
-            padding: 8px 15px;
+            padding: 5px 10px;
             border: 1px solid $black;
-            border-radius: 15px;
+            border-radius: 25px;
+            &:hover{
+                background-color: $bg-primary-button;
+                border: none;
+                color: $white;
+            }
         }
 
 

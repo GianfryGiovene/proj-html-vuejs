@@ -1,11 +1,15 @@
 <template>
     <section>
-        <div>
-            <div>
+        <div class="container">
+            <div class="row col-12 offset-0 col-md-6 offset-md-3 justify-content-center">
                 <TitleAndInfo :title="sectionTitle" :info="sectionInfo"/>
             </div>
-            <div>
-                <CardSecondType :key="card.type" v-for="card in cards" :info="card"/>
+            <div class="row flex-column flex-md-row justify-content-center gap-5">
+                <CardSecondType 
+                class="col-12 col-md-2"
+                :key="card.type" 
+                v-for="card in cards" 
+                :info="card"/>
             </div>
         </div>
     </section>
@@ -65,22 +69,12 @@ export default {
 section{
     padding: 70px 0;
     background-image: url('@/assets/background1.jpg');
-    & > div{
-        max-width: $max-width;
-        margin: auto;
+    & > .container{
         & > div:first-child{
-            width: 40%;
-            margin: auto;
             color: $white;
         }
         & > div:last-child{
             margin-top: 60px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            & > *{
-                width: calc(100% / 4 - 4rem);
-            }
         }
     }
 }
