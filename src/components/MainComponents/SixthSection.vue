@@ -53,7 +53,10 @@ section{
         & > div:nth-child(2){
             margin: 60px 0;
         }
-        & > div:last-child{}
+        & > div:last-child{
+            border-top: 1px solid #f3f3f3;
+            padding: 60px 0 20px;
+        }
     }
 }
 

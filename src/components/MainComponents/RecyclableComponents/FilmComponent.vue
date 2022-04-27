@@ -24,7 +24,6 @@ export default {
     gap: 80px;
     & > div{
         width: calc(100% / 4 - 3rem);
-        border: 1px solid red;
 
     }
 }
