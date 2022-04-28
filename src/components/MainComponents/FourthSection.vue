@@ -4,7 +4,7 @@
             <div class="row col-12 offset-0 col-md-6 offset-md-3 justify-content-center">
                 <TitleAndInfo :title="sectionTitle" :info="sectionInfo"/>
             </div>
-            <div class="row flex-column flex-md-row justify-content-center gap-5">
+            <div class="row flex-column flex-md-row justify-content-between gap-5">
                 <CardSecondType 
                 class="col-12 col-md-2"
                 :key="card.type" 
