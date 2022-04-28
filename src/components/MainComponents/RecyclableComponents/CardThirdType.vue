@@ -1,7 +1,9 @@
 <template>
-    <div>
-        <!-- put image -->
-        <img src="" alt="">
+    <div class="ggf-card row flex-column align-items-center justify-content-center p-3">
+        <div>
+            <img class="w-100" :src="require(`@/assets/blog-post-${news.id}-700x441.jpg`)" alt="">
+        </div>
+        
         <h4>{{ news.title }}</h4>
         <span>{{ news.data }}</span>
         <p>{{ news.text }}</p>
@@ -19,17 +21,14 @@ export default {
 
 <style lang='scss' scoped>
 @import '@/style/variables';
-    div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+    .ggf-card{
         text-align: center;
-        padding: 40px;
+        padding: 20px;
         background-color: $white;
-        .icon{
-            color: $orange;
-            font-size: $icon-size;
+        img{
+            &:hover{
+                filter: blur(2px);
+            }
         }
         h4{
             color: $orange;
@@ -38,7 +37,6 @@ export default {
         p{
             font-size: $p-small-size;
             line-height: 20px;
-            width: 75%;
         }
         a{
             text-decoration: none;

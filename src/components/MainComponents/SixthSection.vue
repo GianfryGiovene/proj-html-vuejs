@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div>
+        <div class="container ">
             <h3>What Our Clients Say</h3>
             <!-- carousel -->
             <div>
@@ -35,7 +35,7 @@ export default {
                 {
                     firstName:'Fiona',
                     Surname:'Desperado',
-                    role:'Recruiter',
+                    role:'RECRUITER',
                     text:'A Lorem ipsuim dolor sit amet, consectetur adipiscing elit. IN et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit '
                 },
             ],

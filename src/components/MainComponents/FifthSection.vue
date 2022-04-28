@@ -1,12 +1,16 @@
 <template>
     <section>
-        <div>
-            <div>
+        <div class="container">
+            <div class="row col-12 offset-0 col-md-6 offset-md-3 justify-content-center">
                 <TitleAndInfo :title="sectionTitle" :info="sectionInfo"/>
             </div>
-            <div>
+            <div class="flex-column flex-md-row justify-content-center gap-5">
                 <!-- da mettere immagine dentro!!! -->
-                <CardThirdType :key="index" v-for="(card,index) in cards" :news="card" />
+                <CardThirdType 
+                class="col-12 col-md-4"
+                :key="card.id" 
+                v-for="card in cards" 
+                :news="card" />
             </div>
             <div>
                 <button>GO TO NEWS</button>
@@ -31,17 +35,19 @@ export default {
             sectionInfo:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
             cards:[
                 {
-                    url: '@/assets/blog-post-6-700x441.jpg',
+                    id: 1,
                     title:'Why You Need A SEO Agency Now',
                     data:'November 1st, 2017',
                     text:'A Lorem ipsuim dolor sit amet, consectetur adipiscing elit. IN et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit'
                 },
                 {
+                    id: 2,
                     title:'SEO Tips For Your Startup',
                     data:'November 1st, 2017',
                     text:'A Lorem ipsuim dolor sit amet, consectetur adipiscing elit. IN et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit'
                 },
                 {
+                    id: 3,
                     title:'Image Optimization For Your SIte',
                     data:'November 1st, 2017',
                     text:'A Lorem ipsuim dolor sit amet, consectetur adipiscing elit. IN et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit'
@@ -58,19 +64,12 @@ section{
     padding: 70px;
     background-color: $bg-general;
     & > div{
-        max-width: $max-width;
-        margin: auto;
-        & > div:first-child{
-            width: 45%;
-            margin: auto;
-        }
         & > div:nth-child(2){
             justify-content: center;
             margin: 60px 0;
             display: flex;
             gap: 40px;
             & > *{
-                width: calc(100% / 3 - 3rem);
                 background-color: $bg-general;
             }
         }
@@ -82,6 +81,9 @@ section{
                 border-radius: 25px;
                 background-color: $bg-primary-button;
                 border: none;
+                &:hover{
+                    filter: brightness(0.9)
+            }
             }
         }
     }
