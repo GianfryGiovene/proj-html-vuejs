@@ -21,6 +21,7 @@ div{
     text-align: center;
     h3{
         font-size: $h3-size;
+        font-weight: $extraBold;
     }
     p{
         margin: 20px 0;

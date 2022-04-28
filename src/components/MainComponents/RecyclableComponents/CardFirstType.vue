@@ -34,6 +34,7 @@ export default {
         }
         h4{
             font-size: $h4-size;
+            font-weight: $extraBold;
             &:hover{
                 color: $orange;
             }

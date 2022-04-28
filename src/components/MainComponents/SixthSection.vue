@@ -48,8 +48,11 @@ export default {
 @import '@/style/variables';
 section{
     padding: 80px 0;
-    & > div{
+    & > .container{
         text-align: center;
+        h3{
+            font-weight: $extraBold;
+        }
         & > div:nth-child(2){
             margin: 60px 0;
         }

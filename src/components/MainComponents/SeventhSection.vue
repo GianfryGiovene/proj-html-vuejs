@@ -1,9 +1,12 @@
 <template>
     <section>
-        <div>
+        <div class="ggf-background"></div>
+        <div class="container">
+            <div>
             <TitleAndInfo :title="sectionTitle" :info="sectionInfo" />
+            </div>
+            <button>CONTACT US NOW</button>
         </div>
-        <button>CONTACT US NOW</button>
     </section>
 </template>
 
@@ -26,20 +29,36 @@ export default {
 <style lang='scss' scoped>
 @import '@/style/variables';
 section{
-    color: $orange;
+    color: $white;
     padding: 60px 0;
-    background-image: url('@/assets/CTA-seo-1.jpg');
-    background-size:cover;
     text-align: center;
-    div{
-        
+    position: relative;
+    .ggf-background{
+        filter: brightness(0.6);
+        min-height: 300px;
+        background-image: url('@/assets/CTA-seo-1.jpg');
+        background-size:cover;
+        background-position: center;
     }
-    button{
-        color: $white;
-        border-radius: 20px;
-        padding: 5px 8px;
-        border: none;
-        background-color: $bg-primary-button;
+    .container{
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(- 50% , - 50%);
+        z-index: 5000;
+        button{
+            margin-top: 15px ;
+            color: $white;
+            border-radius: 20px;
+            padding: 5px 8px;
+            border: none;
+            background-color: $bg-primary-button;
+            &:hover{
+                filter: brightness(0.9)
+            }
+        }
     }
 }
 </style>

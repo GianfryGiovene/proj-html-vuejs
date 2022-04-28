@@ -1,51 +1,41 @@
 <template>
-    <nav class="container navbar navbar-expand-md justify-content-between">
-        <!-- logo -->
-        <img class="navbar-brand " src="@/assets/logo_seo_w_1x.png" alt="logo">
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <!-- nav bar list -->
-            <ul class="navbar-nav list-group flex-grow-1 justify-content-end list-group-horizontal align-items-center">
-                <li 
-                class="list-item "
-                :key="index" 
-                v-for="(title,index) in navList" 
-                @mouseover="title.isOver = true"
-                >
-                    <a  class="text-decoration-none" href="#">{{ title.title }}</a>
-                </li>
-                <li><button>GET IN TOUCH NOW</button></li>
-            </ul>
-        </div>
-        <!-- navbar hamburger menu  -->
-        <!-- sistemare hamburger menu!!!!!!!!!!!!!!!!!!! -->
-        <div class="dropdown">
-            <button @click="clicked" class="navbar-toggler" type="button" id="dropdownMenuButton" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <font-awesome-icon icon="fas fa-bars" ></font-awesome-icon>
+    <nav class="navbar navbar-expand-md justify-content-between">
+        <div class="container">
+            <!-- logo -->
+            <img class="navbar-brand" src="@/assets/logo_seo_w_1x.png" alt="logo">
+
+            <!-- navBar show button -->
+            <button @click="clicked()" class="navbar-toggler ggf-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <font-awesome-icon icon="fas fa-bars" ></font-awesome-icon>
             </button>
-            <div v-if="!isClicked" class="dropdown-menu" >
-                <a 
-                class="dropdown-item"
-                :key="index" 
-                v-for="(title,index) in navList" 
-                @mouseover="title.isOver = true"
-                >
-                    {{ title.title }}
-                </a>
+            <div @mouseleave="isClicked = false" v-if="isClicked" class="ggf-dropdown" >
+                <ul class="ggf-dropdown-ul navbar-nav list-group flex-grow-1 justify-content-end  align-items-center">
+                    <li 
+                    class="nav-item"
+                    :key="index" 
+                    v-for="(title,index) in navList" 
+                    @mouseover="title.isOver = true"
+                    >
+                        <a  class="nav-link text-decoration-none" href="#">{{ title.title }}</a>
+                    </li>
+                    <li class="nav-button"><button>GET IN TOUCH NOW</button></li>
+                </ul>
             </div>
-        </div>
-        
-            
-                <!-- <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div> -->
-             
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- nav bar list -->
+                <ul class="ggf-ul navbar-nav list-group flex-grow-1 justify-content-end list-group-horizontal align-items-center">
+                    <li 
+                    class="nav-item"
+                    :key="index" 
+                    v-for="(title,index) in navList" 
+                    @mouseover="title.isOver = true"
+                    >
+                        <a  class="nav-link text-decoration-none" href="#">{{ title.title }}</a>
+                    </li>
+                    <li class="nav-button"><button>GET IN TOUCH NOW</button></li>
+                </ul>
+            </div>
+        </div>             
     </nav>
 </template>
 
@@ -81,11 +71,12 @@ export default {
     .container{
         padding: 10px 0;
         color: $white;
-        ul{          
+        .ggf-dropdown-ul,
+        .ggf-ul{          
             gap: 20px;
             li{
                 a{
-                    color: $white;
+                    
                     &:hover{
                         color: $orange
                     }
@@ -103,16 +94,33 @@ export default {
                 }
             }
         }
+        .ggf-dropdown-ul{
+            a{
+                color: $dark-grey;
+            }
+        }
+        .ggf-ul{
+            a{
+                color: $white;
+            }
+        }
         & > button{
             font-size: $icon-size;
             color: $white
         }
+        .ggf-dropdown{
+            color: $black;
+            position: absolute;
+            top: 80px;
+            right: 50px;
+            padding: 20px;
+            background-color: $white;
+        }
+        .ggf-button{
+            position: relative;
+        }
+        .ggf-ul{
+
+        }
     }
-
-    // event classes
-
-    
-
-
-
 </style>

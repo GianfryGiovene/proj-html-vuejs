@@ -1,8 +1,15 @@
 <template>        
-        <ul>
-            <!-- assegnazione color on over da implementare e possibile dropdown menu -->
-            <li :key="index" v-for="(title,index) in navList" @mouseover="title.isOver = true">{{ title.title }}</li>
-        </ul>
+        <ul class="navbar-nav list-group flex-grow-1 justify-content-center list-group-horizontal-md align-items-center">
+                <li 
+                class="list-item "
+                :key="index" 
+                v-for="(title,index) in navList" 
+                @mouseover="title.isOver = true"
+                >
+                    <a  class="text-decoration-none" href="#">{{ title.title }}</a>
+                </li>
+                
+            </ul>
 </template>
 
 <script>
@@ -18,20 +25,16 @@ export default {
 <style lang='scss' scoped>
 @import '@/style/variables';
     ul{
-        justify-content: center;
-        list-style-type: none;
-        align-items: center;
-        display: flex;
         gap: 20px;
+        li{
+            a{
+                color: $dark-grey;
+                &:hover{
+                color: $orange;
+                }
+            }
+        }
     }
-    
-
     // event classes
-
-    .isOver{
-        color: $orange
-    }
-
-
-
+    
 </style>

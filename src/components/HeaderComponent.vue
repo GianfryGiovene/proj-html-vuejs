@@ -66,6 +66,7 @@ export default {
             div{
                 h2{
                     font-size: $h2-size;
+                    font-weight: $bold;
                 }
                 p{
                     margin: 30px 0;
@@ -82,9 +83,11 @@ export default {
                 }
                 button:nth-child(3){
                     background-color: $bg-primary-button;
+                    font-weight: $bold;
                 }
                 button:nth-child(4){
                     background-color: $bg-secondary-button;
+                    font-weight: $bold;
                 }
             }
             

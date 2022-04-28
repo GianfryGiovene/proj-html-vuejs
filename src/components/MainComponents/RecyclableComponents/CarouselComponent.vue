@@ -31,11 +31,13 @@ export default {
         }
     },
     methods:{
+        // save pointer
         isSelected(p1){
             this.clientPointerSaved = p1;
             clearInterval(this.interval);
             this.rideOnTheCarousel();
         },
+        // set interval function
         rideOnTheCarousel(){
             this.interval = setInterval(()=>{
                 if(this.clientPointerSaved === 0){
@@ -63,21 +65,27 @@ export default {
         img{
             border-radius: 50%;
         }
+        h5{
+            font-weight: $bold;
+        }
         p{
             margin: 20px 0 ;
         }
     }
-    & > div:last-child{
+    & > .film{
         display: flex;
         justify-content: center;
         gap: 20px;
         & > div{
             margin-top: 20px;
-            border: 1px solid $black;
+            border: 2px solid $black;
             padding: 5px;
             border-radius: 50%;
             background-color: $black;
             cursor: pointer;
+            &:hover{
+                background-color: $white;
+            }
         }
     }
 }

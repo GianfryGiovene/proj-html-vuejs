@@ -46,7 +46,7 @@ export default {
 
 .film{
     overflow-x: hidden;
-    height: 250px;
+    min-height: 250px;
     gap: 80px;
     position: relative;
     & > div{

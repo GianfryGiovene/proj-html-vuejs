@@ -37,6 +37,7 @@ export default {
         background-color: $white;
         h4{
             font-size: $h4-size;
+            font-weight: $extraBold;
         }
         .price{
             display: flex;
@@ -47,6 +48,7 @@ export default {
                 align-self: center;
                 font-size: 2.5rem;
                 color: $scienceBlue;
+                font-weight: $bold;
             }
             & > div{
                 display: flex;
@@ -69,11 +71,14 @@ export default {
         button{
             padding: 5px 10px;
             border: 1px solid $black;
+            color:$dark-grey;
             border-radius: 25px;
+            font-weight: $bold;
             &:hover{
                 background-color: $bg-primary-button;
                 border: none;
                 color: $white;
+                
             }
         }
 

@@ -33,6 +33,7 @@ export default {
         h4{
             color: $orange;
             font-size: $h4-size;
+            font-weight: $extraBold;
         }
         p{
             font-size: $p-small-size;
