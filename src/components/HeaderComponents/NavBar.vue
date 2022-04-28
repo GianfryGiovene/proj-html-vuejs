@@ -119,8 +119,5 @@ export default {
         .ggf-button{
             position: relative;
         }
-        .ggf-ul{
-
-        }
     }
 </style>
